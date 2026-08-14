@@ -33,7 +33,7 @@ All with beautiful icons from Nerd Fonts and smooth animations.
 
 ```bash
 # Clone the repository
-git clone https://github.com/mlynch/waybar-setup.git
+git clone https://github.com/mlynchdev/waybar-setup.git
 cd waybar-setup
 
 # Run the installation script
@@ -82,8 +82,18 @@ The following themes are included:
 # Start waybar
 waybar &
 
-# Or add to your Hyprland config (~/.config/hypr/hyprland.conf)
+# Or add to your Hyprland config
+
+Original hyprlang format (~/.config/hypr/hyprland.conf)
 exec-once = waybar
+
+New Lua format (~/.config/hypr/hyprland.conf)
+hl.on("hyprland.start", function ()
+   hl.exec_cmd("waybar")
+ end)
+
+#
+
 ```
 
 ### Helper Scripts
